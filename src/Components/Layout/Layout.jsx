@@ -1,5 +1,3 @@
-import Grid2 from "@mui/material/Unstable_Grid2";
-
 import Header from "../Header/Header";
 import Body from "../Body";
 import Footer from "../Footer/Footer";
@@ -37,19 +35,17 @@ const Layout = () => {
 
   return (
     <>
-      <Grid2 container rowGap={1}>
-        <Header
-          email={email}
-          buttons={buttons}
-          boxStyling={boxStyling}
-          clicked={clicked}
-        />
-        {page == "Home" && (
-          <Body name={name} message={message} homeOrAbout={home} />
-        )}
-        {page == "Projects" && <Projects />}
-        <Footer boxStyling={boxStyling} />
-      </Grid2>
+      <Header
+        email={email}
+        buttons={buttons}
+        boxStyling={boxStyling}
+        clicked={clicked}
+      />
+      {page == "Home" && (
+        <Body name={name} message={message} homeOrAbout={home} />
+      )}
+      {page == "Projects" && <Projects />}
+      <Footer boxStyling={boxStyling} />
     </>
   );
 };

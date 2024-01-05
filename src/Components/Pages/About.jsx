@@ -7,7 +7,7 @@ const headerStyle = { fontWeight: "bold" };
 
 const About = () => {
   return (
-    <>
+    <div style={{ height: "75vh", overflowY: "auto" }}>
       <Typography variant="h6">About Me:</Typography>
       <br />
 
@@ -26,18 +26,18 @@ const About = () => {
         })}
       </Typography>
       <br />
-      <Typography variant="body1">
+      <Typography variant="body1" sx={headerStyle}>
         Skills:
         {data.skills.map((el) => {
           return <Typography variant="body2">{el}</Typography>;
         })}
       </Typography>
       <br />
-      <Typography variant="body1">
+      <Typography variant="body1" sx={headerStyle}>
         Interests: <Typography variant="body2">{data.interests}</Typography>
       </Typography>
       <br />
-      <Typography variant="body1">
+      <Typography variant="body1" sx={headerStyle}>
         Personal Information:{" "}
         {Object.entries(data.personalInformation).map((el) => {
           return (
@@ -48,7 +48,7 @@ const About = () => {
           );
         })}
       </Typography>
-    </>
+    </div>
   );
 };
 

@@ -24,6 +24,9 @@ const Header = ({ email, buttons, boxStyling, clicked }) => {
             textTransform: "lowercase",
             alignItems: "flex-end",
             display: "flex",
+            "@media (max-width:600px)": {
+              display: "none",
+            },
           }}
         >
           {email}
