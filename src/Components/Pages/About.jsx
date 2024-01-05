@@ -3,7 +3,7 @@ import { aboutMe } from "../../Config";
 
 const data = aboutMe;
 
-headerStyle = { fontWeight: "bold" };
+const headerStyle = { fontWeight: "bold" };
 
 const About = () => {
   return (

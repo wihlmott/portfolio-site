@@ -3,6 +3,7 @@ import discipline_counter_picture from "./images/discipline_counter-pic.png";
 import math_app_picture from "./images/math_app-pic.png";
 import starDash_picture from "./images/starDash-pic.jpg";
 import kids_games_picture from "./images/kids_games-pic.png";
+import portfolio_site_picture from "./images/portfolio_site-pic.png";
 
 import home_pic from "./images/pc_pic.jpg";
 
@@ -40,26 +41,33 @@ export const aboutMe = {
 
 export const data = [
   {
+    title: "Portfolio Website",
+    description: "The website you are looking at.",
+    website: "",
+    code: "https://github.com/wihlmott/portfolio-site",
+    picture: portfolio_site_picture,
+  },
+  {
     title: "StarDash",
     description:
       "StarDash was created to move a current ‘paper system’ to an electronic one. Currently a school in Qatar uses paper checklists to inform on certain classroom checks. StarDash moved the checklist to an electronic version of the list, where the user can check or add a comment per question. After the checklist has been completed, the webapp sents an email to both the recipient and the supervisor doing the check. The checkform is then also saved in the database and can be recovered at anytime by the user. The main user is the supervisor which will have many educators under him/her. Then there is also an option for an administrator, who will have the ability to view the work of all supervisors under him/her.",
     website: "stardash-v1.web.app",
-    code: "https://github.com/wihlmott/portfolio-v1.git ",
+    code: "https://github.com/wihlmott/portfolio-v1",
     picture: starDash_picture,
   },
   {
     title: "Kids Games",
     description: "A match the cards game for kids.",
     website: "vl-kidsgames.web.app",
-    code: "",
+    code: "https://github.com/wihlmott/kids_games",
     picture: kids_games_picture,
   },
   {
     title: "Survey Feed",
     description:
-      "A survey to monitor choices made by recipients as well as allow them to comment on said choices. As well as enabling interaction between users' comments.",
+      "Made for mobile. A survey to monitor choices made by recipients as well as allow them to comment on said choices. As well as enabling interaction between users' comments.",
     website: "survey-feed.web.app",
-    code: "https://github.com/wihlmott/survey-feed.git",
+    code: "https://github.com/wihlmott/survey-feed",
     picture: survey_feed_picture,
   },
   {
@@ -67,7 +75,7 @@ export const data = [
     description:
       "In order to automate the discipline points system that a high school uses, Discipline Counter allows its user to select items which each have a point value and add it to the current class. Then also provides a summary of history per class.",
     website: "discipline-counter.web.app",
-    code: "https://github.com/wihlmott/discipline-counter.git  ",
+    code: "https://github.com/wihlmott/discipline-counter",
     picture: discipline_counter_picture,
   },
   {

@@ -13,8 +13,6 @@ const leftBoxesBottom = {
 };
 
 const Home = ({ name, message, homeOrAbout }) => {
-  // const [showAbout, setShowAbout] = useState(homeOrAbout);
-
   return (
     <>
       <Grid2 item xs={7}>
