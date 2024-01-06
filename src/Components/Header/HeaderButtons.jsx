@@ -7,8 +7,9 @@ const buttonStyles = [
     color: "black",
     px: 5,
     fontWeight: "bold",
+    textShadow: "2px 0px 4px rgba(0, 0, 0, 0.12)",
   },
-  { "&:hover": { backgroundColor: "rgba(230, 230, 230, 0.4)" } },
+  { "&:hover": { backgroundColor: "rgba(230, 230, 230, 0.45)" } },
 ];
 
 const headerButtons = ({ buttons, receiveClick }) => {
@@ -20,11 +21,9 @@ const headerButtons = ({ buttons, receiveClick }) => {
     <>
       {buttons.map((buttonText) => {
         return (
-          <>
-            <Button sx={buttonStyles} onClick={sendSelection} key={buttonText}>
-              {buttonText}
-            </Button>
-          </>
+          <Button sx={buttonStyles} onClick={sendSelection} key={buttonText}>
+            {buttonText}
+          </Button>
         );
       })}
     </>

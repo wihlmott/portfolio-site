@@ -13,7 +13,7 @@ const buttons = ["home", "about", "projects", "resume"];
 const email = "wit.valentine@gmail.com";
 const name = "Wihlmott Valentine";
 const message =
-  "Web Developer - creating responsive websites and web applications";
+  "Web Developer - creating responsive websites and web applications.";
 
 const Layout = () => {
   const [page, setPage] = useState("Home");

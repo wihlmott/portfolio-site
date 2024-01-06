@@ -10,7 +10,7 @@ const boxStylingButtons = {
   display: "flex",
 };
 
-const Header = ({ email, buttons, boxStyling, clicked }) => {
+const Header = ({ email, buttons, clicked }) => {
   const receiveClick = (clickedPage) => {
     clicked(clickedPage);
   };

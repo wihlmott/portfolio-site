@@ -10,8 +10,6 @@ import {
 const cardButtonStyles = { textTransform: "lowercase", m: "auto" };
 
 const ProjectCard = ({ data }) => {
-  console.log(data);
-
   const openSite = () =>
     data.website ? window.open(`https://${data.website}`) : "";
   const openGitHub = () => (data.code ? window.open(`${data.code}`) : "");
@@ -20,9 +18,15 @@ const ProjectCard = ({ data }) => {
     <div>
       <Card sx={{ height: "380px", width: 270, mx: 2, mb: 1 }}>
         <CardContent>
-          <Typography sx={{ fontWeight: "bold", mt: -1, mb: 0.4 }}>
+          <h1
+            style={{
+              marginTop: "-12px",
+              marginBottom: "2px",
+              textDecoration: "none",
+            }}
+          >
             {data.title}
-          </Typography>
+          </h1>
           <CardMedia
             sx={{
               height: "200px",
@@ -30,13 +34,12 @@ const ProjectCard = ({ data }) => {
             }}
             image={data.picture}
           />
-          <Typography variant="subtitle2">Description:</Typography>
-          <Typography
-            variant="body1"
-            sx={{ height: "65px", overflow: "scroll" }}
-          >
+          <h1 style={{ margin: 0, textDecoration: "none", fontSize: "0.9rem" }}>
+            Description:
+          </h1>
+          <p style={{ height: "65px", overflow: "scroll", marginTop: "2px" }}>
             {data.description}
-          </Typography>
+          </p>
         </CardContent>
         <CardActions>
           <Button sx={cardButtonStyles} onClick={openSite}>
