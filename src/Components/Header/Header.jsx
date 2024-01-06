@@ -11,9 +11,7 @@ const boxStylingButtons = {
 };
 
 const Header = ({ email, buttons, clicked }) => {
-  const receiveClick = (clickedPage) => {
-    clicked(clickedPage);
-  };
+  const receiveClick = (clickedPage) => clicked(clickedPage);
 
   return (
     <>

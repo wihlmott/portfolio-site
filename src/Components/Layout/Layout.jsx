@@ -3,11 +3,7 @@ import Body from "../Body";
 import Footer from "../Footer/Footer";
 import { useState } from "react";
 import Projects from "../Pages/Projects/Projects";
-
-const boxStyling = {
-  backgroundColor: "none",
-  borderRadius: "4px",
-};
+import GetInTouch from "../Pages/GetInTouch";
 
 const buttons = ["home", "about", "projects", "resume"];
 const email = "wit.valentine@gmail.com";
@@ -31,21 +27,18 @@ const Layout = () => {
 
     if (pageSelected == "Projects") setPage(pageSelected);
     if (pageSelected == "Resume") setPage(pageSelected);
+    if (pageSelected == "Get In Touch") setPage(pageSelected);
   };
 
   return (
     <>
-      <Header
-        email={email}
-        buttons={buttons}
-        boxStyling={boxStyling}
-        clicked={clicked}
-      />
+      <Header email={email} buttons={buttons} clicked={clicked} />
       {page == "Home" && (
         <Body name={name} message={message} homeOrAbout={home} />
       )}
       {page == "Projects" && <Projects />}
-      <Footer boxStyling={boxStyling} />
+      {page == "Get In Touch" && <GetInTouch />}
+      {page != "Get In Touch" && <Footer clicked={clicked} />}
     </>
   );
 };

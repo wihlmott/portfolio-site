@@ -13,7 +13,7 @@ const About = () => {
       <h1>Tools Used: </h1>
       {data.tools.map((el, i) => {
         return (
-          <p style={{ display: "inline" }}>
+          <p style={{ display: "inline" }} key={el}>
             {el}
             {`${i != data.tools.length - 1 ? `, ` : "."}`}
           </p>
@@ -23,7 +23,7 @@ const About = () => {
       <br />
       <h1>Skills:</h1>
       {data.skills.map((el) => {
-        return <p>{el}</p>;
+        return <p key={el}>{el}</p>;
       })}
 
       <h1>Interests:</h1>
@@ -32,7 +32,7 @@ const About = () => {
       <h1>Personal Information:</h1>
       {Object.entries(data.personalInformation).map((el) => {
         return (
-          <p>
+          <p key={el}>
             {el[0][0].toUpperCase() + el[0].slice(1).replace("_", " ") + `: `}
             {el[1]}
           </p>

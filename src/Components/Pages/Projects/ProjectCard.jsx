@@ -4,10 +4,9 @@ import {
   CardActions,
   CardContent,
   CardMedia,
-  Typography,
 } from "@mui/material";
 
-const cardButtonStyles = { textTransform: "lowercase", m: "auto" };
+const cardButtonStyles = { textTransform: "lowercase", m: "auto", mt: -1.5 };
 
 const ProjectCard = ({ data }) => {
   const openSite = () =>
@@ -37,7 +36,7 @@ const ProjectCard = ({ data }) => {
           <h1 style={{ margin: 0, textDecoration: "none", fontSize: "0.9rem" }}>
             Description:
           </h1>
-          <p style={{ height: "65px", overflow: "scroll", marginTop: "2px" }}>
+          <p style={{ height: "65px", overflowY: "scroll", marginTop: "2px" }}>
             {data.description}
           </p>
         </CardContent>

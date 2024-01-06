@@ -1,4 +1,3 @@
-import Grid2 from "@mui/material/Unstable_Grid2";
 import { Button, Typography } from "@mui/material";
 
 const bottomLinksStyle = [
@@ -8,24 +7,41 @@ const bottomLinksStyle = [
     p: 2.4,
     px: 3.5,
     m: 0.5,
+    mt: 1,
     cursor: "pointer",
-    backgroundColor: "black",
+    background: "black",
     color: "white",
-    boxShadow: "3px 3px 2px 0px rgba(0,0,0,0.5)",
+    boxShadow: "0 0 0 0 rgba(0,0,0,1)",
+    transform: "scale(1)",
     fontWeight: "bold",
+    animation: "pulse 2s infinite",
   },
   { "&:hover": { backgroundColor: "rgba(0, 0, 0, 0.7)" } },
+  {
+    "@keyframes pulse": {
+      "0%": {
+        transform: "scale(0.97)",
+        boxShadow: "0 0 0 0 rgba(0, 0, 0, 0.7)",
+      },
+      "70%": {
+        transform: "scale(1)",
+        boxShadow: "0 0 0 10px rgba(0, 0, 0, 0)",
+      },
+      "100%": {
+        transform: "scale(0.97)",
+        boxShadow: "0 0 0 0 rgba(0, 0, 0, 0)",
+      },
+    },
+  },
 ];
 
-const Footer = ({ boxStyling }) => {
+const Footer = ({ clicked }) => {
+  const handleClick = (e) => clicked(e.target.innerText);
+
   return (
-    <>
-      <Grid2 item xs={12} sx={boxStyling}>
-        <Button sx={bottomLinksStyle}>
-          <Typography variant="body">Get in touch</Typography>
-        </Button>
-      </Grid2>
-    </>
+    <Button sx={bottomLinksStyle} onClick={handleClick}>
+      <Typography variant="body">Get in touch</Typography>
+    </Button>
   );
 };
 
