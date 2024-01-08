@@ -1,4 +1,4 @@
-import { Button, TextField } from "@mui/material";
+import { Alert, Button, TextField } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -11,6 +11,8 @@ const GetInTouch = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [message, setMessage] = useState();
+
+  const [alertMsg, setAlertMsg] = useState();
 
   const updateName = (e) => setName(e.target.value);
   const updateEmail = (e) => setEmail(e.target.value);
@@ -25,14 +27,39 @@ const GetInTouch = () => {
     const formValid = nameIsValid && emailIsValid && messageIsValid;
 
     if (!formValid) {
-      console.log(`error`);
-      return;
+      if (!nameIsValid) {
+        setAlertMsg({ status: "warning", msg: "Name cannot be blank." });
+        return;
+      }
+      if (!emailIsValid) {
+        setAlertMsg({
+          status: "warning",
+          msg: "Email must contain '@' and a period(.)",
+        });
+        return;
+      }
+      if (!messageIsValid) {
+        setAlertMsg({ status: "warning", msg: "Message cannot be blank." });
+        return;
+      }
     }
     const formObj = { from_name: name, from_email: email, message: message };
+
     emailjs
       .send(serviceID, templateID, formObj, publicKey)
-      .then((res) => console.log(res.status))
-      .catch((err) => console.log(err.message));
+      .then((res) => {
+        console.log(res.status);
+        setAlertMsg({ status: "success", msg: "Email sent." });
+        resetForm();
+      })
+      .catch((err) => {
+        console.log(err.message);
+        setAlertMsg({ status: "error", msg: `Error - ${err.message}` });
+      });
+  };
+
+  const resetForm = () => {
+    setName(""), setEmail(""), setMessage("");
   };
 
   return (
@@ -76,6 +103,13 @@ const GetInTouch = () => {
               />
             </div>
           </Grid2>
+          {alertMsg && (
+            <Grid2 item xs={12}>
+              <Alert severity={alertMsg.status} sx={{ m: "auto" }}>
+                {alertMsg.msg}
+              </Alert>
+            </Grid2>
+          )}
           <Button
             variant="contained"
             sx={{

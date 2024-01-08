@@ -4,6 +4,7 @@ import { Button } from "@mui/material";
 import HeaderButtons from "./HeaderButtons";
 
 const boxStylingButtons = {
+  mt: -2,
   backgroundColor: "none",
   justifyContent: "center",
   alignItems: "center",
