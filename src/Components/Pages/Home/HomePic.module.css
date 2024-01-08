@@ -2,13 +2,16 @@
   aspect-ratio: 1;
   height: 65%;
   border-radius: 50%;
+
   transform: translateY(20%);
+  margin: auto;
+
   overflow: hidden;
   box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .pic {
-    transform: translate(5%, 20%);
+    transform: translateY(20%);
   }
-}
+} */
