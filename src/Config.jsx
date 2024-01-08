@@ -4,6 +4,7 @@ import math_app_picture from "./images/math_app-pic.png";
 import starDash_picture from "./images/starDash-pic.jpg";
 import kids_games_picture from "./images/kids_games-pic.png";
 import portfolio_site_picture from "./images/portfolio_site-pic.png";
+import todo_picture from "./images/todo-pic.png";
 
 import home_pic from "./images/pc_pic.jpg";
 
@@ -85,5 +86,13 @@ export const data = [
     website: "mathapp-v1-ff340.web.app",
     code: "",
     picture: math_app_picture,
+  },
+  {
+    title: "ToDo list",
+    description:
+      "A to do list app, made using vanilla Javascript. Todos can be created, edited, details can be added to each. And once complete it can be sent to the completed section, or deleted. There is a help modal and the data is saved in local storage, so information is saved in the browser.",
+    website: "todo-list-7d639.web.app/",
+    code: "",
+    picture: todo_picture,
   },
 ];
