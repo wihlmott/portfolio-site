@@ -4,6 +4,7 @@ import Footer from "../Footer/Footer";
 import { useState } from "react";
 import Projects from "../Pages/Projects/Projects";
 import GetInTouch from "../Pages/GetInTouch";
+import Resume from "../Pages/Resume";
 
 const buttons = ["home", "about", "projects", "resume"];
 const email = "wit.valentine@gmail.com";
@@ -38,6 +39,7 @@ const Layout = () => {
       )}
       {page == "Projects" && <Projects />}
       {page == "Get In Touch" && <GetInTouch />}
+      {page == "Resume" && <Resume />}
       {page != "Get In Touch" && <Footer clicked={clicked} />}
     </>
   );
