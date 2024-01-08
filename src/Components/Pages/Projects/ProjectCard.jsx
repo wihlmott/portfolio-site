@@ -8,6 +8,11 @@ import {
 
 const cardButtonStyles = { textTransform: "lowercase", m: "auto", mt: -1.5 };
 
+const cardStyle = [
+  { height: "380px", width: 270, mx: 2, mb: 1 },
+  { "&:hover": { transform: "scale(1.03)" } },
+];
+
 const ProjectCard = ({ data }) => {
   const openSite = () =>
     data.website ? window.open(`https://${data.website}`) : "";
@@ -15,7 +20,7 @@ const ProjectCard = ({ data }) => {
 
   return (
     <div>
-      <Card sx={{ height: "380px", width: 270, mx: 2, mb: 1 }}>
+      <Card sx={cardStyle}>
         <CardContent>
           <h1
             style={{
