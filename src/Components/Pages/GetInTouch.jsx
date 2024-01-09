@@ -72,58 +72,65 @@ const GetInTouch = () => {
       >
         Get In Touch
       </h1>
-      <div
-        style={{
-          height: "60vh",
-          width: "400px",
-          position: "relative",
-          left: "50%",
-          transform: "translateX(-50%)",
-        }}
-      >
-        <Grid2 container>
-          <Grid2 item xs={6}>
-            <div>
-              <p>Name:*</p>
-              <TextField sx={{ mr: 0.5 }} onChange={updateName} />
-            </div>
-          </Grid2>
-          <Grid2 item xs={6}>
-            <p>Email:*</p>
-            <TextField sx={{ ml: 0.5 }} onChange={updateEmail} />
-          </Grid2>
-          <Grid2 item xs={12}>
-            <div>
-              <p>Message:*</p>
-              <TextField
-                sx={{ width: "100%" }}
-                multiline
-                rows={10}
-                onChange={updateMessage}
-              />
-            </div>
-          </Grid2>
-          {alertMsg && (
-            <Grid2 item xs={12}>
-              <Alert severity={alertMsg.status} sx={{ m: "auto" }}>
-                {alertMsg.msg}
-              </Alert>
-            </Grid2>
-          )}
-          <Button
-            variant="contained"
-            sx={{
-              mx: "auto",
-              mt: 2,
-              borderRadius: "15px",
-              background: "black",
+
+      <Grid2 container>
+        <Grid2 item md={4} xs={0.5}></Grid2>
+        <Grid2 item md={4} xs={11}>
+          <div
+            style={{
+              height: "60vh",
+              width: "100%",
+              position: "relative",
+              left: "50%",
+              transform: "translateX(-50%)",
             }}
-            onClick={submitForm}
           >
-            Send
-          </Button>
+            <Grid2 container>
+              <Grid2 item xs={6}>
+                <div>
+                  <p>Name:*</p>
+                  <TextField sx={{ mr: 0.5 }} onChange={updateName} />
+                </div>
+              </Grid2>
+              <Grid2 item xs={6}>
+                <p>Email:*</p>
+                <TextField sx={{ ml: 0.5 }} onChange={updateEmail} />
+              </Grid2>
+              <Grid2 item xs={12}>
+                <div>
+                  <p>Message:*</p>
+                  <TextField
+                    sx={{ width: "100%" }}
+                    multiline
+                    rows={10}
+                    onChange={updateMessage}
+                  />
+                </div>
+              </Grid2>
+              {alertMsg && (
+                <Grid2 item xs={12}>
+                  <Alert severity={alertMsg.status} sx={{ m: "auto" }}>
+                    {alertMsg.msg}
+                  </Alert>
+                </Grid2>
+              )}
+              <Button
+                variant="contained"
+                sx={{
+                  mx: "auto",
+                  mt: 2,
+                  borderRadius: "15px",
+                  background: "black",
+                }}
+                onClick={submitForm}
+              >
+                Send
+              </Button>
+            </Grid2>
+          </div>
         </Grid2>
-      </div>
+        <Grid2 item md={4} xs={0.5}></Grid2>
+      </Grid2>
     </>
   );
 };
