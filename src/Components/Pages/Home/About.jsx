@@ -10,6 +10,16 @@ const About = () => {
 
       <p>{data.description}</p>
 
+      <h1>Education: </h1>
+      {data.education.map((el, i) => {
+        return (
+          <p style={{ display: "inline" }} key={el}>
+            {el}
+            {`${i != data.education.length - 1 ? `, ` : "."}`}
+          </p>
+        );
+      })}
+
       <h1>Tools Used: </h1>
       {data.tools.map((el, i) => {
         return (

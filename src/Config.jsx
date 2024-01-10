@@ -12,8 +12,9 @@ export const homePic = home_pic;
 
 export const aboutMe = {
   description:
-    "Hi, I am Wihmott Valentine. I am a Web Developer. I am passionate about problem solving, and developing myself in whichever tasks I find to do. I have a National Diploma in Mathematics; my major subjects are mathematics and statistics – and while studying I found my love for programming. Currently I am working as a Mathematics Educator, teaching grades 8-12, and freelancing as a webapps developer. See some of my projects on the projects page.",
+    "Hi, I am Wihmott Valentine. I am a Web Developer. I am passionate about problem solving, and developing myself in whichever tasks I find to do. I have a National Diploma in Mathematics; my major subjects are mathematics and statistics – and while studying I found my love for programming. Currently I am working as a Mathematics Educator, teaching grades 8-12, and freelancing as a webapps developer. See some of my projects on the projects page. Prior to teaching, I completed a BA in Theology, and now serve as a minister at the Eastridge Chuch of Christ - where I teach and preach.",
   interests: "The Bible, Karate, Table Tennis",
+  education: ["ND: Mathematics", "BA: Theology", "PGCE"],
   skills: [
     "I am a hard worker, driven, and determined to complete a goal once I've set my mind to it.",
     "I am competitive, always trying to achieve the best in the role that I find myself in.",
@@ -24,6 +25,7 @@ export const aboutMe = {
     "HTML",
     "CSS",
     "ReactJS",
+    "React Native",
     "MaterialUI",
     "Firebase",
     "EmailJS",
