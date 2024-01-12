@@ -6,6 +6,8 @@ import {
   CardMedia,
 } from "@mui/material";
 
+import apk_file from "../../../apk/weather_VL.apk";
+
 const cardButtonStyles = { textTransform: "lowercase", m: "auto", mt: -1.5 };
 
 const cardStyle = [
@@ -16,6 +18,7 @@ const cardStyle = [
 const ProjectCard = ({ data }) => {
   const openSite = () =>
     data.website ? window.open(`https://${data.website}`) : "";
+
   const openGitHub = () => (data.code ? window.open(`${data.code}`) : "");
 
   return (
@@ -46,9 +49,23 @@ const ProjectCard = ({ data }) => {
           </p>
         </CardContent>
         <CardActions>
-          <Button sx={cardButtonStyles} onClick={openSite}>
-            website
-          </Button>
+          {data.download != null && (
+            <a
+              href={apk_file}
+              download="weather_VL.apk"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button sx={{ textTransform: "lowercase", ml: 4, mt: -1.5 }}>
+                download
+              </Button>
+            </a>
+          )}
+          {data.website != null && (
+            <Button sx={cardButtonStyles} onClick={openSite}>
+              website
+            </Button>
+          )}
           <Button sx={cardButtonStyles} onClick={openGitHub}>
             code
           </Button>

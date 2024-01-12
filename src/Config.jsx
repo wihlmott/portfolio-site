@@ -5,6 +5,7 @@ import starDash_picture from "./images/starDash-pic.jpg";
 import kids_games_picture from "./images/kids_games-pic.png";
 import portfolio_site_picture from "./images/portfolio_site-pic.png";
 import todo_picture from "./images/todo-pic.png";
+import weather_app_picture from "./images/weather_VL-pic.png";
 
 import home_pic from "./images/pc_pic.jpg";
 
@@ -43,6 +44,14 @@ export const aboutMe = {
 };
 
 export const data = [
+  {
+    title: "Weather App",
+    description:
+      "A simple weather application, that allows you to view weekly forcast for a particular local town.",
+    download: "",
+    code: "https://github.com/wihlmott/weather_app",
+    picture: weather_app_picture,
+  },
   {
     title: "Portfolio Website",
     description: "The website you are looking at.",
